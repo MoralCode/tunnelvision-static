@@ -86,13 +86,7 @@ View Full Size Image</a>{% endif %}</pre>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
-                <!-- Status -->
-
-                <span class="chip" style="background-color: {{ article[" status"]["background_color"] }}; color:{{ article["status"]["text_color"] }}">
-                    {{ article["status"]["message"] }}
-                </span>
-
-
+       
                 {% if article["notes"] != '' %}
                 <h3>Description:</h3>
                 <pre style="font-family:inherit;font-size:inherit; text-wrap:wrap">{{ article["notes"] }} </pre>
