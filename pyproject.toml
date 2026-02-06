@@ -1,7 +1,7 @@
 [project]
-name = "accessdirectory"
+name = "tunnelvision-static"
 version = "0.1.0"
-description = "Add your description here"
+description = "A static site version of a TunnelVision style catalog, built with Pelican"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
