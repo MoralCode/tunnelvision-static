@@ -19,6 +19,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+ARCHIVES_SAVE_AS = "catalog"
+
 # Blogroll
 LINKS = (
     ("Pelican", "https://getpelican.com/"),
