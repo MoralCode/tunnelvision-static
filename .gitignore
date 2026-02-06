@@ -1,7 +1,29 @@
-config.py
-__*
-venv/*
+*.egg-info
+.*.swp
+.*.swo
+*.pyc
+.DS_Store
+docs/_build
+docs/*/_build
+build
+dist
+tags
+.tox
+.coverage
+htmlcov
+*.orig
+venv
+samples/output
+*.pem
+*.lock
+.pdm-python
+.vale
+.venv
+**/LC_MESSAGES/*.mo
 
-*.env
-.env
-compose.env
+# direnv
+.envrc
+
+# IDE cruft
+.idea
+.vscode
