@@ -6,7 +6,9 @@ A reimplementation of TunnelVision as a statically-generated site.
 
 Due to its use of Jinja2 templates and python base, Pelican seems like the best choice for static site generator here.
 
+## Running
 
+`uv run make devserver`
 
 
 ## Lineage
