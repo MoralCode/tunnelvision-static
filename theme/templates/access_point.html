@@ -2,14 +2,6 @@
 {% block title %}
 {{ accessPointDetails["title"] }} - CampusPulse Access
 {% endblock %}
-{% block metadata %}
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tunnelvision.csh.rit.edu/murals/{{ accessPointDetails['id'] }}" />
-<meta property="og:title" content="{{ accessPointDetails['title'] }}" />
-<meta property="og:description" content="{{ accessPointDetails['notes'] }}" />
-<meta property="og:image" content="{{ accessPointDetails['thumbnail'] }}" />
-<meta name="description" value="CampusPulse Access is an interactive catalog of the accessibility devices on RIT's campus by maintenance status." />
-{% endblock %}
 {% block dynamic_content %}
 
 <style>
