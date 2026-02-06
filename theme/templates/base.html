@@ -131,18 +131,8 @@
 					<img alt="Discord logo" src="/static/images/discord-fontawesome.svg" style="width: 30px;">
 				</a>
 				<a class="nav-link" href="https://github.com/CampusPulse/access-directory" target="_blank">
-					<img alt="github logo" title="Git: {{ config['GIT_REVISION'] }}" src="/static/images/github.svg" style="width: 30px;">
+					<img alt="github logo" title="github" src="/static/images/github.svg" style="width: 30px;">
 				</a>
-				{% if authsession %}
-				<a class="nav-link" href="/logout">
-					{% if is_admin %}
-					Logout <span style="text-decoration: underline;">{{authsession.userinfo.name}}</span>
-					{% else %}
-					Logout {{authsession.userinfo.name}}
-					{% endif %}
-
-				</a>
-				{% endif %}
 			</div>
 		</div>
 	</nav>
