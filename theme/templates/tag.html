@@ -7,11 +7,12 @@ Catalog - CampusPulse Access
 
 <div class="container text-center">
 
-    {% if tags | length > 0 %}
-    {% for tag,_ in tags: %}
-    <a href="/tag/{{ tag }}"><p class="chip">{{ tag }}</p></a>
-    {% endfor %}
-    {% endif %}
+    <div class="row text-start">
+        <div class="col-3">
+            <a href="/catalog" class=" text-left"> &lt; back to catalog</a>
+        </div>
+    </div>
+    <h2>Tag - {{ tag }}</h2>
 
     {% if articles | length > 0 %}
     <div class="container-fluid">
