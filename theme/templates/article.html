@@ -47,7 +47,7 @@
         <div class="col-lg-8 col-md-12">
             <div id="muralImagesCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    {% for image in article["images"]: %}
+                    {% for title, gallery in article.photo_gallery %}
                     {% if loop.index == 1 %}
                     <button type="button" data-bs-target="muralImagesCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="active" aria-current="true" aria-label="Slide {{ loop.index-1 }}"></button>
                     {% else %}
@@ -56,24 +56,30 @@
                     {% endfor %}
                 </div>
                 <div class="carousel-inner">
-                    {% for image in article["images"]: %}
+                    
+                    {% for gallery_title, gallery in article.photo_gallery %}
+                    {% for (filename, photo, thumb, exif, caption) in gallery %}
                     {% if loop.index == 1 %}
                     <div class="carousel-item active">
-                        {% else %}
-                        <div class="carousel-item text-center">
+                    {% else %}
+                    <div class="carousel-item text-center">
+                    {% endif %}
+                        <img class="main-img" alt="{{ caption }}" src="{{ SITEURL }}/{{ photo }}">
+                        <div class="carousel-caption d-none d-md-block banner-value">
+                            {% if caption != None %}
+                            <p class="no-a-styles">{{ caption }}</p>
                             {% endif %}
-                            <img class="main-img" alt="{{ article['images'][loop.index-1]['alttext'] }}" src="{{ article['images'][loop.index-1]['imgurl'] }}">
-                            <div class="carousel-caption d-none d-md-block banner-value">
-                                {% if article['images'][loop.index-1]['caption'] != None %}<p class="no-a-styles">
-                                    {{ article['images'][loop.index-1]['caption'] }}</p>{% endif %}
-                                <pre style="font-family:inherit;font-size:inherit;text-wrap:wrap">{% if article['images'][loop.index-1]['attribution'] != None %}Photo: {{ article['images'][loop.index-1]['attribution']}}{% if article['images'][loop.index-1]['datecreated'] != None %}, {{ article['images'][loop.index-1]['datecreated'].strftime("%B %d, %Y") }}{% endif %}{% endif %}{% if article['images'][loop.index-1]['fullsizeimage']%}<a class="no-a-styles" href="{{ article['images'][loop.index-1]['fullsizeimage'] }}">
-View Full Size Image</a>{% endif %}</pre>
-                            </div>
+                            <p style="font-family:inherit;font-size:inherit;text-wrap:wrap">
+                                {% if exif != None %}{{ exif }}{% endif %}<br>
+                                {% if photo %}<a class="no-a-styles" href="{{ SITEURL }}/{{ photo }}">View Full Size Image</a>{% endif %}
+                            </p>
                         </div>
-                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
                     </div>
 
-                    {% if article["images"]|length > 1 %}
+                    {% if gallery|length > 1 %}
                     <button class="carousel-control-prev" type="button" data-bs-target="#muralImagesCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>

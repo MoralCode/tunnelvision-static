@@ -51,4 +51,6 @@ IMAGE_PROCESS = {
 IMAGE_PROCESS_DIR = "derived"
 
 
+PHOTO_LIBRARY = "./gallery"
+
 REPO_URL = "https://github.com/CampusPulse/access-directory"
