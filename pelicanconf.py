@@ -42,3 +42,10 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+
+IMAGE_PROCESS = {
+    "article-image": ["scale_in 300 300 False"],
+    "thumb": ["scale_in 180 180 False"],
+}
+IMAGE_PROCESS_DIR = "derived"
