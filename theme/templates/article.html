@@ -87,9 +87,9 @@ View Full Size Image</a>{% endif %}</pre>
             </div>
             <div class="col-lg-4 col-md-12">
        
-                {% if article["notes"] != '' %}
+                {% if article.content != '' %}
                 <h3>Description:</h3>
-                <pre style="font-family:inherit;font-size:inherit; text-wrap:wrap">{{ article["notes"] }} </pre>
+                <pre style="font-family:inherit;font-size:inherit; text-wrap:wrap">{{ article.content }} </pre>
                 {% endif %}
 
                 <h3>Location:</h3>
