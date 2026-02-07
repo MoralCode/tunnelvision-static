@@ -8,7 +8,7 @@ Catalog - CampusPulse Access
 <div class="container text-center">
 
     {% if tags | length > 0 %}
-    {% for tag,_ in tags: %}
+    {% for tag,_ in tags|sort %}
     <a href="/tag/{{ tag }}"><p class="chip">{{ tag }}</p></a>
     {% endfor %}
     {% endif %}
