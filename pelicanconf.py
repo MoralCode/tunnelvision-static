@@ -49,3 +49,6 @@ IMAGE_PROCESS = {
     "thumb": ["scale_in 180 180 False"],
 }
 IMAGE_PROCESS_DIR = "derived"
+
+
+REPO_URL = "https://github.com/CampusPulse/access-directory"
