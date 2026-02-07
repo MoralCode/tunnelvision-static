@@ -48,11 +48,14 @@
             <div id="muralImagesCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     {% for title, gallery in article.photo_gallery %}
+                    {% for (filename, photo, thumb, exif, caption) in gallery %}
                     {% if loop.index == 1 %}
                     <button type="button" data-bs-target="muralImagesCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="active" aria-current="true" aria-label="Slide {{ loop.index-1 }}"></button>
                     {% else %}
                     <button type="button" data-bs-target="muralImagesCaptions" data-bs-slide-to="{{ loop.index-1 }}" aria-label="Slide {{ loop.index-1 }}"></button>
                     {% endif %}
+
+                    {% endfor %}
                     {% endfor %}
                 </div>
                 <div class="carousel-inner">
@@ -78,7 +81,7 @@
                     {% endfor %}
                     {% endfor %}
                     </div>
-
+                    {% for title, gallery in article.photo_gallery %}
                     {% if gallery|length > 1 %}
                     <button class="carousel-control-prev" type="button" data-bs-target="#muralImagesCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,6 +92,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                     {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
