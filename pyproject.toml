@@ -8,7 +8,6 @@ dependencies = [
     "beautifulsoup4>=4.14.2",
     "json-log-formatter==1.0",
     "pelican>=4.11.0.post0",
-    "pelican-image-process>=3.3.0",
     "pelican-photos>=1.6.2",
     "pillow==10.1.0",
     "pypng==0.20220715.0",
