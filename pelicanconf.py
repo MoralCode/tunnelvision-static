@@ -19,7 +19,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-ARCHIVES_SAVE_AS = "catalog"
+ARCHIVES_SAVE_AS = "catalog.html"
+ARTICLE_SAVE_AS = 'catalog/{id}.html'
 
 # Blogroll
 LINKS = (
