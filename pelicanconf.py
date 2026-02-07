@@ -22,6 +22,8 @@ AUTHOR_FEED_RSS = None
 ARCHIVES_SAVE_AS = "catalog.html"
 ARTICLE_SAVE_AS = 'catalog/{id}.html'
 
+THEME_STATIC_DIR = "static"
+
 # Blogroll
 LINKS = (
     ("Pelican", "https://getpelican.com/"),
